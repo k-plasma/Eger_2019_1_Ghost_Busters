@@ -1,10 +1,12 @@
 # 1. Introduction
 
-Some paragraph.
-
 ## 1.1 Purpose
+Meet John. He'll be our user. This app is out to make John's life so much easier and organised. When he's able to see clearly what he spends his time doing, John can become more productive. The App should enable the user to add notes and keep track of the notes. We expect John to log in his daily tasks, make changes to them and with a couple of clicks, John should be able to have an overview of his activities in a given time. To achieve this aim, we'll be implementing various techniques and software development tools
+1. MongoDB will be used to store John's data
+2. PHP on the backend, just ot mention a few.
 
 ## 1.2 Intended Audience
+Our target audience is users like John who want to improve their current situation. It's a well proven fact that if we track our activities over time and document them, it'll be easier to make the changes required to become more productive.
 
 ## 1.3 Scope
 
