@@ -6,9 +6,7 @@ Some paragraph.
 
 ## 1.2 Intended Audience
 
-## 1.3 Intended Use
-
-## 1.4 Scope
+## 1.3 Scope
 
 ## 1.5 Definitions and Acronyms
 
