@@ -1,5 +1,7 @@
 # 1. Introduction
 
+Some paragraph.
+
 ## 1.1 Purpose
 
 ## 1.2 Intended Audience
