@@ -10,7 +10,11 @@ Our target audience is users like John who want to improve their current situati
 
 ## 1.3 Scope
 
-## 1.5 Definitions and Acronyms
+The project scope is mostly defined by the size of our team. Our team is just big enough to to support a FullStack development of a simple project. Our manpower will be able to manage the full course of the development.
+
+Monetary wise our project scope is zeroed, meaning we will use free and already available tools for the development.
+
+Time wise our project scope is extremely restricted. We should allow documentation work until the end of October, then the actual development must begin.
 
 # 2. Overall Description
 
