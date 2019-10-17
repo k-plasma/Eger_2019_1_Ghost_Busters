@@ -29,3 +29,5 @@ Time wise our project scope is extremely restricted. We should allow documentati
 ## 3.3 System Features
 
 ## 3.4 Nonfunctional Requirements
+
+1) Our web application should be able to handle 10.000 users without affecting its performance.
