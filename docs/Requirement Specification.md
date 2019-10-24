@@ -35,3 +35,5 @@ We are assuming the tasks are simple, and will not need extensive descriptions o
 ## 3.4 Nonfunctional Requirements
 
 1) Our web application should be able to handle 10.000 users without affecting its performance.
+2) We have to take into consideration the security parts of our app for example if user fails to enter credentials for three times we should suspend the sign in functionality for certain amount of time for example: 5 or 10 min 
+3) we have to give suggestions for the user who is signing up, he or she better use special chars numbers alphabet etc. to make the password more secure, but it is not mandatory, which means user can use a very simple password as well   
