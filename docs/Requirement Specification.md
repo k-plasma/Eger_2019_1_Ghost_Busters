@@ -27,8 +27,19 @@ We are assuming the tasks are simple, and will not need extensive descriptions o
 # 3. System Features and Requirements
 
 ## 3.1 Functional Requirements
+FR1: The web application allows the users to register.
+FR2: For registration user has to provide a unique for the system username and a password. In case user cannot remember the password, they should be able to restore it. 
+FR3: Once logged in, the users must see the list of their tasks. This page is the user homepage.
+FR4: Users must be able to add new task and modify the old ones and delete ones that are not needed anymore.
+FR5: Tasks include such attributes as name, date of creating the task and the deadline, category, and status(finished or not finished) and a field for any additional notes the user might want to include.
+FR6: The "History" page displays the following information: the number of completed tasks, number of tasks in progress, average time for completing a progect, number of projects not finished in time and some further metrics.
 
 ## 3.2 External Interface Requirements
+USER INTERFACES:
+1. Home page (Log in button, register button)
+2. User homepage (Add task, List of tasks, Log out button buttons; link to the history page)
+3. History page
+4. Task interface (called when user creates a new task or modifies an old one)
 
 ## 3.3 System Features
 
