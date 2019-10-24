@@ -19,8 +19,10 @@ Time wise our project scope is extremely restricted. We should allow documentati
 # 2. Overall Description
 
 ## 2.1 User Needs
+The user should be able to create, edit and delete notes within the app. The notes should be able to be given tags for sorting by category. Notes should be able to be assigned dates and times so that they can be organized by time, and a Daily, Weekly, and Monthly overview should be available. 
 
 ## 2.2 Assumptions and Dependencies
+We are assuming the tasks are simple, and will not need extensive descriptions or things like checklists. We are also assuming this program will be used by one person at a time, and there will not be multiple user accounts on a single device. The project is dependant on the abilities of the team to work together to accomplish it. We will be using C#, PHP and MongoDB, so the software will be limited by the capabilities of those as well. 
 
 # 3. System Features and Requirements
 
