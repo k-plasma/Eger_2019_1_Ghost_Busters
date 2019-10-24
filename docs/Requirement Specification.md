@@ -30,8 +30,8 @@ We are assuming the tasks are simple, and will not need extensive descriptions o
 FR1: The web application allows the users to register.
 FR2: For registration user has to provide a unique for the system username and a password. In case user cannot remember the password, they should be able to restore it. 
 FR3: Once logged in, the users must see the list of their tasks. This page is the user homepage.
-FR4: Users must be able to add new task and modify the old ones.
-FR5: Tasks include such attributes as name, deadline, importance(from 1 to 10) and status(finished or not finished) and a field for any additional notes the user might want to include.
+FR4: Users must be able to add new task and modify the old ones and delete ones that are not needed anymore.
+FR5: Tasks include such attributes as name, date of creating the task and the deadline, category, and status(finished or not finished) and a field for any additional notes the user might want to include.
 FR6: The "History" page displays the following information: the number of completed tasks, number of tasks in progress, average time for completing a progect, number of projects not finished in time and some further metrics.
 
 ## 3.2 External Interface Requirements
