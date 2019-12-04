@@ -1,26 +1,17 @@
-<?php
-class Database{
- 
+<?php 
     //Tania's localhost data
-    //To be modified
-    private $host = "localhost";
-    private $db_name = "NotesApp";
-    private $username = "tanja";
-    private $password = "2201";
-    public $conn;
+    //To be modified 
+
+function getConnection($host = "localhost", $db_name = "NotesApp", $username = "tanja", $password = "2201"){
  
-    public function getConnection(){
- 
-        $this->conn = null;
- 
-        try{
-            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-            $this->conn->exec("set names utf8");
-        }catch(PDOException $exception){
-            echo "Connection error: " . $exception->getMessage();
-        }
- 
-        return $this->conn;
-    }
+    try{
+        $conn = new PDO("mysql:host=" . $host . ";dbname=" . $db_name, $username, $password);
+        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+        $conn->exec("set names utf8");
+    }catch(PDOException $exception){
+        echo "Connection error: " . $exception->getMessage();
+    } 
+    return $conn;
 }
+
 ?>
