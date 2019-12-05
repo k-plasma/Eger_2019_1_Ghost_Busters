@@ -130,8 +130,18 @@
             </div>
           </div>
           <h3 class="text-bold">Pending Tasks</h3>
-          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
-
+        <div class="todo-list">
+            <ol>
+                <div class= "todo"></div> <!-- :class="{ 'done': todo.read }" -->
+                    <todo-item
+                        v-for="item in todoList"
+                        v-bind:todo="item"
+                        :class="{ 'done': item.done }"
+                    ></todo-item>
+                </div>
+                
+            </ol>
+        </div>
           <div class="clear"></div>
         </div>
 
@@ -142,8 +152,18 @@
             </div>
           </div>
           <h3 class="text-bold">Task History</h3>
-          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
-
+        <div class="todo-list">
+            <ol>
+                <div class= "todo"></div> <!-- :class="{ 'done': todo.read }" -->
+                    <todo-item
+                        v-for="item in todoList"
+                        v-bind:todo="item"
+                        :class="{ 'done': item.done }"
+                    ></todo-item>
+                </div>
+                
+            </ol>
+        </div>
           <div class="clear"></div>
         </div>
 
