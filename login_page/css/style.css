@@ -1,0 +1,83 @@
+#main-wrapper{
+    width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #2d3436;
+}
+
+.eke{
+    width: 150px;
+    text-align: center;
+    
+}
+
+.myform{
+    width: 450px;
+    margin: 0 auto;
+}
+
+.inputvalues{
+    width: 430px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+#login_btn{
+    margin-top: 20px;
+    background-color: #44bd32;
+    padding: 5px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#register_btn{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    background-color: #e77f67;
+    padding: 5px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#signup_btn{
+    margin-top: 20px;
+    background-color: #33d9b2;
+    padding: 5px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#back_btn{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    background-color: #e77f67;
+    padding: 5px;
+    color: white;
+    width: 30%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#logout_btn{
+    margin-top: 20px;
+    background-color: #ffb142;
+    padding: 5px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
