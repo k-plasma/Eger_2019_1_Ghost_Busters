@@ -5,7 +5,7 @@ class HomeController extends AController
 {
     public function View()
     {
-        echo 'view';
+        require_once __DIR__.'\..\resources\views\home.php';
     }
 
     public function Register()
