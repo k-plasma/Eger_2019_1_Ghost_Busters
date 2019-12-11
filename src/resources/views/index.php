@@ -1,4 +1,6 @@
 <?php
+    session_unset();
+    session_destroy();
     session_start();
     require_once '../../lib/Data/database_conn.php';
     $con = get_mysqli_conn();

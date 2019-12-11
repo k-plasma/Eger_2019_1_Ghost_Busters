@@ -1,8 +1,6 @@
 <?php
     require_once '../../lib/Data/database_conn.php';
     $con = get_mysqli_conn();
-    
-
 ?>
 
 <!DOCTYPE html>
