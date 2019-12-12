@@ -30,12 +30,12 @@
       	  <span class="fa fa-bars color-white"></span>
         </button>
         <div class="navbar-logo">
-          <a href="index.html"><img data-0="width:155px;" data-300=" width:120px;" src="img/logo.png" alt=""></a>
+          <a href="#"><img data-0="width:155px;" data-300=" width:120px;" src="img/logo.png" alt=""></a>
         </div>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="#">Home</a></li>
           <li><a href="#section-about">About</a></li>
           <li><a href="#section-works">Portfolio</a></li>
           <li><a href="#section-contact">Contact</a></li>
@@ -67,7 +67,11 @@
             </div>
           </div>
           <h3 class="text-bold">Add Task</h3>
-          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
+          <div class="todo-form">
+            <textarea v-model="todotext" form="todoForm">Enter task item</textarea>
+            <br>
+            <button v-on:click="addToList">save task</button>
+        </div>
 
           <div class="clear"></div>
         </div>
@@ -79,19 +83,13 @@
             </div>
           </div>
           <h3 class="text-bold">List Of Tasks</h3>
-          <div class="todo-form">
-            <textarea v-model="todotext" form="todoForm">Enter todo item</textarea>
-            <br>
-            <button v-on:click="addToList">save todo</button>
-        </div>
         <div class="todo-list">
             <ol>
                 <div class= "todo"></div> <!-- :class="{ 'done': todo.read }" -->
-                    <todo-item
-                        v-for="item in todoList"
-                        v-bind:todo="item"
-                        :class="{ 'done': item.done }"
-                    ></todo-item>
+                    <ol>
+                      <li>Item 1</li>
+                      <li>Item 2</li>
+                    </ol>
                 </div>
                 
             </ol>
@@ -109,11 +107,7 @@
         <div class="todo-list">
             <ol>
                 <div class= "todo"></div> <!-- :class="{ 'done': todo.read }" -->
-                    <todo-item
-                        v-for="item in todoList"
-                        v-bind:todo="item"
-                        :class="{ 'done': item.done }"
-                    ></todo-item>
+                    
                 </div>
                 
             </ol>
@@ -133,11 +127,7 @@
         <div class="todo-list">
             <ol>
                 <div class= "todo"></div> <!-- :class="{ 'done': todo.read }" -->
-                    <todo-item
-                        v-for="item in todoList"
-                        v-bind:todo="item"
-                        :class="{ 'done': item.done }"
-                    ></todo-item>
+
                 </div>
                 
             </ol>
