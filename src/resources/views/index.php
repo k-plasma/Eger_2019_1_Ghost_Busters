@@ -1,13 +1,16 @@
 <?php
+    session_unset();
+    session_destroy();
     session_start();
-    require 'dbconfig/config.php';
+    require_once '../../lib/Data/database_conn.php';
+    $con = get_mysqli_conn();
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <title>Student Login Page</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../../public/css/style1.css">
 
     </head>
         <body style="background-color:#48dbfb">
@@ -15,7 +18,7 @@
             <div id="main-wrapper">
                 <center>
                     <h2>E.K.E Login Form</h2>
-                    <img src="imgs/eke.png" class="eke"/>
+                    <img src="../../public/img/eke.png" class="eke"/>
                 </center>
             
 
@@ -50,7 +53,7 @@
                         {
                             //valid
                             $_SESSION['username']= $username;
-                            header('location:homepage.php');
+                            header('location:userhomepage.php');
                         }
                         else
                         {

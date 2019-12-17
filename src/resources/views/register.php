@@ -1,13 +1,13 @@
 <?php
-    require 'dbconfig/config.php';
-
+    require_once '../../lib/Data/database_conn.php';
+    $con = get_mysqli_conn();
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <title>Student Registration Page</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../../public/css/style.css">
 
     </head>
         <body style="background-color:#48dbfb">
@@ -15,7 +15,7 @@
             <div id="main-wrapper">
                 <center>
                     <h2>E.K.E Registration Form</h2>
-                    <img src="imgs/eke.png" class="eke"/>
+                    <img src="../../public/img/eke.png" class="eke"/>
                 </center>
             
 
@@ -46,6 +46,7 @@
                         $password = $_POST['password'];
                         $cpassword = $_POST['cpassword'];
 
+
                         //empty fields check
                         if( trim($username) == "" || trim($password) == "" || trim($cpassword) == ""){
                             echo '<script type="text/javascript"> alert("All fields are required.") </script>';
@@ -56,8 +57,8 @@
                         {
                             $query= "select * from user WHERE neptun='$username'";
 
-                            $query_run = mysqli_query($con,$query);
-
+                            $query_run = mysqli_query($con, $query);
+                        
                             if(mysqli_num_rows($query_run)>0)
                             {
                                 echo '<script type="text/javascript"> alert("User already exits...Try another username") </script>';
@@ -70,15 +71,15 @@
 
                                 $query= "insert into user(neptun, password) values('$username','$password')";
                                 
-                                $query_run = mysqli_query($con,$query);
+                                $query_run = mysqli_query($con, $query);
 
                                 if($query_run)
-                                {
-                                    
+                                {                                    
                                     echo '<script type="text/javascript"> alert("Success...Go To Login Page") </script>';                                  
                                 }
                                 else
-                                {
+                                {   
+                                    echo("Error description: ".$con->error);
                                     echo '<script type="text/javascript"> alert("Error!!") </script>';
                                 }
                             }

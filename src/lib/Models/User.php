@@ -7,8 +7,6 @@ include_once "../Data/database_conn.php";
  */
 class User extends AModel
 {
-    protected $dbConnection = null;
-    
     static public function init()
     {
         self::$dbConnection = getConnection();

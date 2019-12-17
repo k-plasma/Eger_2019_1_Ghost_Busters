@@ -7,16 +7,19 @@
   <title>EKE - Application Lab Group 2</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="js/rs-plugin/css/settings.css" media="screen">
-  <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen">
-  <link rel="stylesheet" href="css/flexslider.css" type="text/css">
-  <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/settings.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../../public/css/isotope.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../../public/css/animate.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../../public/css/font-awesome.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../../public/css/overwrite.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../../public/css/flexslider.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../../public/js/fancybox/jquery.fancybox.css" media="screen">
+  <link rel="stylesheet" href="../../public/css/bootstrap.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:300,400,600,700">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../../public/css/style.css">
   <!-- skin -->
-  <link rel="stylesheet" href="skin/default.css">
+  <link rel="stylesheet" href="../../skin/default.css">
   
 
 </head>
@@ -30,15 +33,16 @@
       	  <span class="fa fa-bars color-white"></span>
         </button>
         <div class="navbar-logo">
-          <a href="#"><img data-0="width:155px;" data-300=" width:120px;" src="img/logo.png" alt=""></a>
+          <a href="index.html"><img data-0="width:155px;" data-300=" width:120px;" src="../..//public/img/logo.png" alt=""></a>
         </div>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-          <li class="active"><a href="#">Home</a></li>
+          <li class="active"><a href="index.html">Home</a></li>
           <li><a href="#section-about">About</a></li>
           <li><a href="#section-works">Portfolio</a></li>
           <li><a href="#section-contact">Contact</a></li>
+          <li><a href="index.php">Logout</a></li>
         </ul>
       </div>
       <!--/.navbar-collapse -->
@@ -67,11 +71,7 @@
             </div>
           </div>
           <h3 class="text-bold">Add Task</h3>
-          <div class="todo-form">
-            <textarea v-model="todotext" form="todoForm">Enter task item</textarea>
-            <br>
-            <button v-on:click="addToList">save task</button>
-        </div>
+          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
 
           <div class="clear"></div>
         </div>
@@ -83,17 +83,8 @@
             </div>
           </div>
           <h3 class="text-bold">List Of Tasks</h3>
-        <div class="todo-list">
-            <ol>
-                <div class= "todo"></div> <!-- :class="{ 'done': todo.read }" -->
-                    <ol>
-                      <li>Item 1</li>
-                      <li>Item 2</li>
-                    </ol>
-                </div>
-                
-            </ol>
-        </div>
+          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
+
           <div class="clear"></div>
         </div>
 
@@ -104,14 +95,8 @@
             </div>
           </div>
           <h3 class="text-bold">Completed Tasks</h3>
-        <div class="todo-list">
-            <ol>
-                <div class= "todo"></div> <!-- :class="{ 'done': todo.read }" -->
-                    
-                </div>
-                
-            </ol>
-        </div>
+          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
+
           <div class="clear"></div>
         </div>
 
@@ -124,14 +109,8 @@
             </div>
           </div>
           <h3 class="text-bold">Pending Tasks</h3>
-        <div class="todo-list">
-            <ol>
-                <div class= "todo"></div> <!-- :class="{ 'done': todo.read }" -->
+          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
 
-                </div>
-                
-            </ol>
-        </div>
           <div class="clear"></div>
         </div>
 
@@ -142,18 +121,8 @@
             </div>
           </div>
           <h3 class="text-bold">Task History</h3>
-        <div class="todo-list">
-            <ol>
-                <div class= "todo"></div> <!-- :class="{ 'done': todo.read }" -->
-                    <todo-item
-                        v-for="item in todoList"
-                        v-bind:todo="item"
-                        :class="{ 'done': item.done }"
-                    ></todo-item>
-                </div>
-                
-            </ol>
-        </div>
+          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
+
           <div class="clear"></div>
         </div>
 
@@ -184,7 +153,7 @@
                 <li>
                   <div class="testimonial clearfix">
                     <div class="mar-bot20">
-                      <img alt="" src="img/testimonial/testimonial1.png" class="img-circle">
+                      <img alt="" src="../..//public/img/testimonial/testimonial1.png" class="img-circle">
                     </div>
                     <i class="fa fa-quote-left fa-5x"></i>
                     <h5>
@@ -198,7 +167,7 @@
                 <li>
                   <div class="testimonial clearfix">
                     <div class="mar-bot20">
-                      <img alt="" src="img/testimonial/testimonial2.png" class="img-circle">
+                      <img alt="" src="../../public/img/testimonial/testimonial2.png" class="img-circle">
                     </div>
                     <i class="fa fa-quote-left fa-5x"></i>
                     <h5>
@@ -211,7 +180,7 @@
                 <li>
                   <div class="testimonial clearfix">
                     <div class="mar-bot20">
-                      <img alt="" src="img/testimonial/testimonial3.png" class="img-circle">
+                      <img alt="" src="../../public/img/testimonial/testimonial3.png" class="img-circle">
                     </div>
                     <i class="fa fa-quote-left fa-5x"></i>
                     <h5>
@@ -246,7 +215,7 @@
       <div class="row align-center mar-bot40">
         <div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="img/team/member1.jpg" alt=""></figure>
+            <figure class="member-photo"><img src="../../public/img/team/member1.jpg" alt=""></figure>
             <div class="team-detail">
               <h4>Deji Adeyemo</h4>
               <span>FrontEnd Designer</span>
@@ -255,7 +224,7 @@
         </div>
         <div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="img/team/member3.jpg" alt=""></figure>
+            <figure class="member-photo"><img src="../../public/img/team/member3.jpg" alt=""></figure>
             <div class="team-detail">
               <h4>Tetiana Hrunyk</h4>
               <span>Web designer</span>
@@ -264,7 +233,7 @@
         </div>
         <div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="img/team/member4.jpg" alt=""></figure>
+            <figure class="member-photo"><img src="../../public/img/team/member4.jpg" alt=""></figure>
             <div class="team-detail">
               <h4>Aziz Gasimov</h4>
               <span>BackEnd Designer</span>
@@ -273,7 +242,7 @@
         </div>
         <div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="img/team/member2.jpg" alt=""></figure>
+            <figure class="member-photo"><img src="../../public/img/team/member2.jpg" alt=""></figure>
             <div class="team-detail">
               <h4>Kovacs Miklos</h4>
               <span>SCRUM Master</span>
@@ -282,7 +251,7 @@
         </div>
         <div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="img/team/member3.jpg" alt=""></figure>
+            <figure class="member-photo"><img src="../../public/img/team/member3.jpg" alt=""></figure>
             <div class="team-detail">
               <h4>Rayne Blair</h4>
               <span>Web designer</span>
@@ -291,7 +260,7 @@
         </div>
         <div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="img/team/member4.jpg" alt=""></figure>
+            <figure class="member-photo"><img src="../../public/img/team/member4.jpg" alt=""></figure>
             <div class="team-detail">
               <h4>Emad Z</h4>
               <span>UI designer</span>
@@ -300,7 +269,7 @@
         </div>
         <div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="img/team/member1.jpg" alt=""></figure>
+            <figure class="member-photo"><img src="../../public/img/team/member1.jpg" alt=""></figure>
             <div class="team-detail">
               <h4>Yamen Python</h4>
               <span>FrontEnd Designer</span>
@@ -342,11 +311,11 @@
 
               <article class="col-md-4 isotopeItem webdesign">
                 <div class="portfolio-item">
-                  <img src="img/portfolio/img1.jpg" alt="">
+                  <img src="../../public/img/portfolio/img1.jpg" alt="">
                   <div class="portfolio-desc align-center">
                     <div class="folio-info">
                       <h5><a href="#">Portfolio name</a></h5>
-                      <a href="img/portfolio/img1.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                      <a href="../../public/img/portfolio/img1.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
                     </div>
                   </div>
                 </div>
@@ -354,11 +323,11 @@
 
               <article class="col-md-4 isotopeItem photography">
                 <div class="portfolio-item">
-                  <img src="img/portfolio/img2.jpg" alt="">
+                  <img src="../../public/img/portfolio/img2.jpg" alt="">
                   <div class="portfolio-desc align-center">
                     <div class="folio-info">
                       <h5><a href="#">Portfolio name</a></h5>
-                      <a href="img/portfolio/img2.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                      <a href="../../public/img/portfolio/img2.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
                     </div>
                   </div>
                 </div>
@@ -367,11 +336,11 @@
 
               <article class="col-md-4 isotopeItem photography">
                 <div class="portfolio-item">
-                  <img src="img/portfolio/img3.jpg" alt="">
+                  <img src="../../public/img/portfolio/img3.jpg" alt="">
                   <div class="portfolio-desc align-center">
                     <div class="folio-info">
                       <h5><a href="#">Portfolio name</a></h5>
-                      <a href="img/portfolio/img3.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                      <a href="../../public/img/portfolio/img3.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
                     </div>
                   </div>
                 </div>
@@ -379,11 +348,11 @@
 
               <article class="col-md-4 isotopeItem print">
                 <div class="portfolio-item">
-                  <img src="img/portfolio/img4.jpg" alt="">
+                  <img src="../../public/img/portfolio/img4.jpg" alt="">
                   <div class="portfolio-desc align-center">
                     <div class="folio-info">
                       <h5><a href="#">Portfolio name</a></h5>
-                      <a href="img/portfolio/img4.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                      <a href="../../public/img/portfolio/img4.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
                     </div>
                   </div>
                 </div>
@@ -391,11 +360,11 @@
 
               <article class="col-md-4 isotopeItem photography">
                 <div class="portfolio-item">
-                  <img src="img/portfolio/img5.jpg" alt="">
+                  <img src="../../public/img/portfolio/img5.jpg" alt="">
                   <div class="portfolio-desc align-center">
                     <div class="folio-info">
                       <h5><a href="#">Portfolio name</a></h5>
-                      <a href="img/portfolio/img5.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                      <a href="../../public/img/portfolio/img5.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
                     </div>
                   </div>
                 </div>
@@ -403,11 +372,11 @@
 
               <article class="col-md-4 isotopeItem webdesign">
                 <div class="portfolio-item">
-                  <img src="img/portfolio/img6.jpg" alt="">
+                  <img src="../../public/img/portfolio/img6.jpg" alt="">
                   <div class="portfolio-desc align-center">
                     <div class="folio-info">
                       <h5><a href="#">Portfolio name</a></h5>
-                      <a href="img/portfolio/img6.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                      <a href="../../public/img/portfolio/img6.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
                     </div>
                   </div>
                 </div>
@@ -415,11 +384,11 @@
 
               <article class="col-md-4 isotopeItem print">
                 <div class="portfolio-item">
-                  <img src="img/portfolio/img7.jpg" alt="">
+                  <img src="../../public/img/portfolio/img7.jpg" alt="">
                   <div class="portfolio-desc align-center">
                     <div class="folio-info">
                       <h5><a href="#">Portfolio name</a></h5>
-                      <a href="img/portfolio/img7.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                      <a href="../../public/img/portfolio/img7.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
                     </div>
                   </div>
                 </div>
@@ -427,11 +396,11 @@
 
               <article class="col-md-4 isotopeItem photography">
                 <div class="portfolio-item">
-                  <img src="img/portfolio/img8.jpg" alt="">
+                  <img src="../../public/img/portfolio/img8.jpg" alt="">
                   <div class="portfolio-desc align-center">
                     <div class="folio-info">
                       <h5><a href="#">Portfolio name</a></h5>
-                      <a href="img/portfolio/img8.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                      <a href="../../public/img/portfolio/img8.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
                     </div>
                   </div>
                 </div>
@@ -439,11 +408,11 @@
 
               <article class="col-md-4 isotopeItem print">
                 <div class="portfolio-item">
-                  <img src="img/portfolio/img9.jpg" alt="">
+                  <img src="../../public/img/portfolio/img9.jpg" alt="">
                   <div class="portfolio-desc align-center">
                     <div class="folio-info">
                       <h5><a href="#">Portfolio name</a></h5>
-                      <a href="img/portfolio/img9.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                      <a href="../../public/img/portfolio/img9.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
                     </div>
                   </div>
                 </div>
@@ -544,25 +513,25 @@
   <a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
 
   <!-- Javascript Library Files -->
-  <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-  <script src="js/jquery.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.isotope.min.js"></script>
-  <script src="js/jquery.nicescroll.min.js"></script>
-  <script src="js/fancybox/jquery.fancybox.pack.js"></script>
-  <script src="js/skrollr.min.js"></script>
-  <script src="js/jquery.scrollTo.min.js"></script>
-  <script src="js/jquery.localScroll.min.js"></script>
-  <script src="js/stellar.js"></script>
-  <script src="js/jquery.appear.js"></script>
-  <script src="js/jquery.flexslider-min.js"></script>
+  <script src="../../../js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script src="../../../js/jquery.js"></script>
+  <script src="../../../js/jquery.easing.1.3.js"></script>
+  <script src="../../../js/bootstrap.min.js"></script>
+  <script src="../../../js/jquery.isotope.min.js"></script>
+  <script src="../../../js/jquery.nicescroll.min.js"></script>
+  <script src="../../../js/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="../../../js/skrollr.min.js"></script>
+  <script src="../../../js/jquery.scrollTo.min.js"></script>
+  <script src="../../../js/jquery.localScroll.min.js"></script>
+  <script src="../../../js/stellar.js"></script>
+  <script src="../../../js/jquery.appear.js"></script>
+  <script src="../../../js/jquery.flexslider-min.js"></script>
 
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="../../../contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="../../../js/main.js"></script>
 
 </body>
 

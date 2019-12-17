@@ -14,4 +14,8 @@ function getConnection($host = "localhost", $db_name = "NotesApp", $username = "
     return $conn;
 }
 
-?>
+
+function get_mysqli_conn(){
+    $con = mysqli_connect("localhost","tanja","2201", "NotesApp") or die("Unable to connect");
+    return $con;
+}
