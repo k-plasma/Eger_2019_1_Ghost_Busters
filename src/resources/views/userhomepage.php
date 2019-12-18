@@ -149,41 +149,41 @@
                 <li>
                   <div class="testimonial clearfix">
                     <div class="mar-bot20">
-                      <img alt="" src="../..//public/img/testimonial/testimonial1.png" class="img-circle">
+                      <img alt="" src="../../public/img/testimonial/testimonial1.png" class="img-circle">
                     </div>
-                    <i class="fa fa-quote-left fa-5x"></i>
+                    
                     <h5>
-												Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
+                    Get your priorities straight.
 											</h5>
                     <br/>
-                    <span class="author">&mdash; SARAH DOE <a href="#">www.siteurl.com</a></span>
+                    
                   </div>
                 </li>
 
                 <li>
                   <div class="testimonial clearfix">
                     <div class="mar-bot20">
-                      <img alt="" src="../../public/img/testimonial/testimonial2.png" class="img-circle">
+                      <img alt="" src="../../public/img/testimonial/testimonial2.jpeg" class="img-circle">
                     </div>
-                    <i class="fa fa-quote-left fa-5x"></i>
+                   
                     <h5>
-												Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
+                    Diarise everything. 
 												</h5>
                     <br/>
-                    <span class="author">&mdash; NICOLE DOE <a href="#">www.siteurl.com</a></span>
+                    
                   </div>
                 </li>
                 <li>
                   <div class="testimonial clearfix">
                     <div class="mar-bot20">
-                      <img alt="" src="../../public/img/testimonial/testimonial3.png" class="img-circle">
+                      <img alt="" src="../../public/img/testimonial/testimonial3.jpeg" class="img-circle">
                     </div>
-                    <i class="fa fa-quote-left fa-5x"></i>
+                    
                     <h5>
-											Nunc velit risus, dapibus non interdum quis, suscipit nec dolor. Vivamus tempor tempus mauris vitae fermentum. In vitae nulla lacus. Sed sagittis tortor vel arcu sollicitudin nec tincidunt metus suscipit.Nunc velit risus, dapibus non interdum.
+                    Be prepared. 
 											</h5>
                     <br/>
-                    <span class="author">&mdash; DASON KRUN <a href="#">www.siteurl.com</a></span>
+                    
                   </div>
                 </li>
               </ul>
@@ -203,7 +203,7 @@
         <div class="col-md-offset-3 col-md-6">
           <div class="section-header">
             <h2 class="section-heading animated" data-animation="bounceInUp">Meet the E.K.E Team</h2>
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
+            
           </div>
         </div>
       </div>
@@ -279,200 +279,6 @@
   <!-- /about -->
 
   
-  <!-- section works -->
-  <section id="section-works" class="section appear clearfix">
-    <div class="container">
-
-      <div class="row mar-bot40">
-        <div class="col-md-offset-3 col-md-6">
-          <div class="section-header">
-            <h2 class="section-heading animated" data-animation="bounceInUp">Portfolio</h2>
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <nav id="filter" class="col-md-12 text-center">
-          <ul>
-            <li><a href="#" class="current btn btn-small" data-filter="*">Appointments</a></li>
-            <li><a href="#" class="btn btn-small" data-filter=".webdesign">Deadline</a></li>
-            <li><a href="#" class="btn btn-small" data-filter=".photography">Future Meetings</a></li>
-            <li><a href="#" class="btn btn-small" data-filter=".print">Cancelled</a></li>
-          </ul>
-        </nav>
-        <div class="col-md-12">
-          <div class="row">
-            <div class="portfolio-items isotopeWrapper clearfix" id="3">
-
-              <article class="col-md-4 isotopeItem webdesign">
-                <div class="portfolio-item">
-                  <img src="../../public/img/portfolio/img1.jpg" alt="">
-                  <div class="portfolio-desc align-center">
-                    <div class="folio-info">
-                      <h5><a href="#">Portfolio name</a></h5>
-                      <a href="../../public/img/portfolio/img1.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="col-md-4 isotopeItem photography">
-                <div class="portfolio-item">
-                  <img src="../../public/img/portfolio/img2.jpg" alt="">
-                  <div class="portfolio-desc align-center">
-                    <div class="folio-info">
-                      <h5><a href="#">Portfolio name</a></h5>
-                      <a href="../../public/img/portfolio/img2.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-
-              <article class="col-md-4 isotopeItem photography">
-                <div class="portfolio-item">
-                  <img src="../../public/img/portfolio/img3.jpg" alt="">
-                  <div class="portfolio-desc align-center">
-                    <div class="folio-info">
-                      <h5><a href="#">Portfolio name</a></h5>
-                      <a href="../../public/img/portfolio/img3.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="col-md-4 isotopeItem print">
-                <div class="portfolio-item">
-                  <img src="../../public/img/portfolio/img4.jpg" alt="">
-                  <div class="portfolio-desc align-center">
-                    <div class="folio-info">
-                      <h5><a href="#">Portfolio name</a></h5>
-                      <a href="../../public/img/portfolio/img4.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="col-md-4 isotopeItem photography">
-                <div class="portfolio-item">
-                  <img src="../../public/img/portfolio/img5.jpg" alt="">
-                  <div class="portfolio-desc align-center">
-                    <div class="folio-info">
-                      <h5><a href="#">Portfolio name</a></h5>
-                      <a href="../../public/img/portfolio/img5.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="col-md-4 isotopeItem webdesign">
-                <div class="portfolio-item">
-                  <img src="../../public/img/portfolio/img6.jpg" alt="">
-                  <div class="portfolio-desc align-center">
-                    <div class="folio-info">
-                      <h5><a href="#">Portfolio name</a></h5>
-                      <a href="../../public/img/portfolio/img6.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="col-md-4 isotopeItem print">
-                <div class="portfolio-item">
-                  <img src="../../public/img/portfolio/img7.jpg" alt="">
-                  <div class="portfolio-desc align-center">
-                    <div class="folio-info">
-                      <h5><a href="#">Portfolio name</a></h5>
-                      <a href="../../public/img/portfolio/img7.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="col-md-4 isotopeItem photography">
-                <div class="portfolio-item">
-                  <img src="../../public/img/portfolio/img8.jpg" alt="">
-                  <div class="portfolio-desc align-center">
-                    <div class="folio-info">
-                      <h5><a href="#">Portfolio name</a></h5>
-                      <a href="../../public/img/portfolio/img8.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="col-md-4 isotopeItem print">
-                <div class="portfolio-item">
-                  <img src="../../public/img/portfolio/img9.jpg" alt="">
-                  <div class="portfolio-desc align-center">
-                    <div class="folio-info">
-                      <h5><a href="#">Portfolio name</a></h5>
-                      <a href="../../public/img/portfolio/img9.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  
-
-  
-
-  <!-- contact -->
-  <section id="section-contact" class="section appear clearfix">
-    <div class="container">
-
-      <div class="row mar-bot40">
-        <div class="col-md-offset-3 col-md-6">
-          <div class="section-header">
-            <h2 class="section-heading animated" data-animation="bounceInUp">Contact us</h2>
-            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <div class="cform" id="contact-form">
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
-            <div id="errormessage"></div>
-            <form action="" method="post" class="contactForm">
-
-              <div class="field your-name form-group">
-                <input type="text" name="name" placeholder="Your Name" class="cform-text" size="40" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                <div class="validation"></div>
-              </div>
-              <div class="field your-email form-group">
-                <input type="text" name="email" placeholder="Your Email" class="cform-text" size="40" data-rule="email" data-msg="Please enter a valid email">
-                <div class="validation"></div>
-              </div>
-              <div class="field subject form-group">
-                <input type="text" name="subject" placeholder="Subject" class="cform-text" size="40" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
-                <div class="validation"></div>
-              </div>
-
-              <div class="field message form-group">
-                <textarea name="message" class="cform-textarea" cols="40" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
-                <div class="validation"></div>
-              </div>
-
-              <div class="send-btn">
-                <input type="submit" value="SEND MESSAGE" class="btn btn-theme">
-              </div>
-
-            </form>
-          </div>
-        </div>
-        <!-- ./span12 -->
-      </div>
-
-    </div>
-  </section>
-
   <section id="footer" class="section footer">
     <div class="container">
       <div class="row animated opacity mar-bot20" data-andown="fadeIn" data-animation="animation">
