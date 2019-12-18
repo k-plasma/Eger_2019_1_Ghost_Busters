@@ -26,7 +26,7 @@
 
 <body>
   <section id="header" class="appear"></section>
-  <div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(5, 42, 62, 1);">
+  <div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(5, 42, 62, 1); display: inline">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -66,7 +66,7 @@
               <a href="#" class="hi-icon hi-icon-screen">screen</a>
             </div>
           </div>
-          <a href = "task.php"><h3 class="text-bold">Add Task</h3></a>
+          <a href = "add_task.php"><h3 class="text-bold">Add Task</h3></a>
           
 
           <div class="clear"></div>
@@ -78,7 +78,7 @@
               <a href="#" class="hi-icon hi-icon-location">location</a>
             </div>
           </div>
-          <h3 class="text-bold">List Of Tasks</h3>
+          <a href = "task_list.php"><h3 class="text-bold">List Of Tasks</h3></a>
           
 
           <div class="clear"></div>
@@ -128,7 +128,7 @@
               <a href="#" class="hi-icon hi-icon-clock">Faster</a>
             </div>
           </div>
-          <h3 class="text-bold">Miscellaneous</h3>
+          <h3 class="text-bold">Edit task</h3>
           
 
           <div class="clear"></div>

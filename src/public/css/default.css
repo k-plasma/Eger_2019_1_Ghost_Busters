@@ -4,22 +4,22 @@
 */
 
 a:hover {
-	color: #95cbdd;
+	color: #95cbdd !important;
 }
 
 /* menu */
 .nav>li>a:hover {
-	color: #95cbdd;
+	color: #95cbdd !important;
 }
 
 .navbar .navbar-nav > .active > a {
-	color: #95cbdd;
-	border-bottom: 4px solid #85b0be;
+	color: #95cbdd !important;
+	border-bottom: 4px solid #85b0be !important;
 }
 
 /* flexslider */
 .flex-control-paging li a {
-	background: #85b0be;
+	background: #85b0be !important;
 }
 
 
