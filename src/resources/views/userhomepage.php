@@ -38,7 +38,7 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
-          <li class="active"><a href="index.html">Home</a></li>
+          <li class="active"><a href="userhomepage.php">Home</a></li>
           <li><a href="#section-about">About</a></li>
           <li><a href="#section-works">Portfolio</a></li>
           <li><a href="#section-contact">Contact</a></li>
@@ -52,10 +52,6 @@
   <section id="intro">
     <div class="intro-content">
       <h2>Welcome to E.K.E Task Manager!</h2>
-      <h3>Lorem ipsum dolor sit amet, elit persecuti efficiendi</h3>
-      <div>
-        <a href="#section-services" class="btn-get-started scrollto">Get Started</a>
-      </div>
     </div>
   </section>
 
@@ -70,8 +66,8 @@
               <a href="#" class="hi-icon hi-icon-screen">screen</a>
             </div>
           </div>
-          <h3 class="text-bold">Add Task</h3>
-          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
+          <a href = "task.php"><h3 class="text-bold">Add Task</h3></a>
+          
 
           <div class="clear"></div>
         </div>
@@ -83,7 +79,7 @@
             </div>
           </div>
           <h3 class="text-bold">List Of Tasks</h3>
-          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
+          
 
           <div class="clear"></div>
         </div>
@@ -95,7 +91,7 @@
             </div>
           </div>
           <h3 class="text-bold">Completed Tasks</h3>
-          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
+          
 
           <div class="clear"></div>
         </div>
@@ -109,7 +105,7 @@
             </div>
           </div>
           <h3 class="text-bold">Pending Tasks</h3>
-          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
+         
 
           <div class="clear"></div>
         </div>
@@ -121,7 +117,7 @@
             </div>
           </div>
           <h3 class="text-bold">Task History</h3>
-          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
+          
 
           <div class="clear"></div>
         </div>
@@ -133,7 +129,7 @@
             </div>
           </div>
           <h3 class="text-bold">Miscellaneous</h3>
-          <p>Lorem ipsum dolor sit amet, elit persecuti efficiendi sit ad.</p>
+          
 
           <div class="clear"></div>
         </div>
