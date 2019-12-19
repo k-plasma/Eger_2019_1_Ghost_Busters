@@ -176,6 +176,7 @@ class Task extends AModel
     include_once(__DIR__."../../../src/lib/Models/Task.php");*/ 
 
     $task = new Task();
+<<<<<<< HEAD
 
     if (isset($_POST['delete']) && isset($_POST['deltitle'])){
         $temp_title = preg_replace("/_/", " ", $_POST['deltitle']);
@@ -191,10 +192,16 @@ class Task extends AModel
         $_SESSION['notes'] = $temp_notes;
         header('Location:  edit_task.php');
         exit();
+=======
+
+    if (isset($_POST['delete']) && isset($_POST['deltitle'])){
+        $task->Delete($_POST['deltitle'], $_SESSION['username']);
+>>>>>>> a7f83918d778a68f74e93ebfc3038f6428ed5ffa
     }
 
     $tasks = $task->Read($_SESSION['username']);
     foreach($tasks as $t){
+<<<<<<< HEAD
 
         print '<div class="card">
         <div class="card-header">
@@ -220,10 +227,35 @@ class Task extends AModel
         </div>
       </div>';
     }
+=======
+        
+        print '<div class="card">
+        <div class="card-header">
+          <strong>'.$t['title'].'</strong>
+        </div>
+        <div class="card-body">
+        <p class="card-text">Deadline: '.$t['deadline'].' </p>  
+          <p class="card-text">Notes: '.$t['notes'].' </p>
+          <form action = "task_list.php" method = "post">          
+          <input type = "hidden" name = "deltitle" value = '.$t['title'].'>
+          <input type = "hidden" name = "delete" value = "yes">
+          <input type = "submit" name = "submit" value = "Delete task" class="btn btn-primary">
+          <a href="edit_task.php" class="btn btn-primary">Edit task</a>
+          </form>
+          
+        </div>
+      </div>';
+    }
+
+  
+?>
+>>>>>>> a7f83918d778a68f74e93ebfc3038f6428ed5ffa
 
   
 ?>
 
+
+  
 
   
 
