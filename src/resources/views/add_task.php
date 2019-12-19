@@ -213,7 +213,7 @@ class Task extends AModel
   
   
   <div>
-    <form method = "post" action = "task.php" id = "taskform"><pre>
+    <form method = "post" action = "add_task.php" id = "taskform"><pre>
         <h3>Task Title:               </h3><input type = "text" name = "title" required>
         <h3>Task Deadline(yyyy-mm-dd:)</h3><input type = "text" name = "deadline" required>
         <h3>Notes:                    </h3>
