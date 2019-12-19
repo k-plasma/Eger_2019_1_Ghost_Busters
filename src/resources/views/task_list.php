@@ -54,13 +54,12 @@ class Task extends AModel
         return true;
     }
 
-    static public function Read(string $title, $username)
+    static public function Read(string $username)
     {
         $dbConnection = getConnection();
         try {
-            $query = $dbConnection->prepare("SELECT * FROM Tasks WHERE title = ? and username = ?");
-            $query->bindParam(1, $title, PDO::PARAM_STR);
-            $query->bindParam(2, $username, PDO::PARAM_STR);
+            $query = $dbConnection->prepare("SELECT * FROM Tasks WHERE username = ?");
+            $query->bindParam(1, $username, PDO::PARAM_STR);
             $query->execute();
             $num_rows = $query->rowCount();
         } catch (PDOException $e){
@@ -70,7 +69,7 @@ class Task extends AModel
         if (!$num_rows) {
             return false;
         } else {
-            $result = $query->fetch(PDO::FETCH_ASSOC);
+            $result = $query->fetchAll();
             return $result;
         }
 
@@ -178,34 +177,39 @@ class Task extends AModel
     failed to open stream: 
     No such file or directory in /var/www/html/Eger_2019_1_Ghost_Busters/src/resources/views/task.php on line 59
     include_once(__DIR__."../../../src/lib/Models/Task.php");*/ 
+
+    $task = new Task();
+
+    if (isset($_POST['delete']) && isset($_POST['deltitle'])){
+        $task->Delete($_POST['deltitle'], $_SESSION['username']);
+    }
+
+    $tasks = $task->Read($_SESSION['username']);
+    foreach($tasks as $t){
+        
+        print '<div class="card">
+        <div class="card-header">
+          <strong>'.$t['title'].'</strong>
+        </div>
+        <div class="card-body">
+        <p class="card-text">Deadline: '.$t['deadline'].' </p>  
+          <p class="card-text">Notes: '.$t['notes'].' </p>
+          <form action = "task_list.php" method = "post">          
+          <input type = "hidden" name = "deltitle" value = '.$t['title'].'>
+          <input type = "hidden" name = "delete" value = "yes">
+          <input type = "submit" name = "submit" value = "Delete task" class="btn btn-primary">
+          <a href="edit_task.php" class="btn btn-primary">Edit task</a>
+          </form>
+          
+        </div>
+      </div>';
+    }
+
   
 ?>
 
-<div class="card">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+
   
-<div class="card">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
-
-
-
 
   <section id="footer" class="section footer">
     <div class="container">

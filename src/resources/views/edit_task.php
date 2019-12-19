@@ -195,6 +195,7 @@ class Task extends AModel
         "deadline" => $_POST['deadline'], "notes" => $_POST['notes']);
         
         $task = new Task();
+        $task->Delete($_POST['title'], $_SESSION['username']);
         
         if (!empty($errors)){
             foreach ($errors as $error){
@@ -203,7 +204,7 @@ class Task extends AModel
         }
         
         if ($task->Create($new_task)) {
-            print "<h1>Task ".$_POST['title']." was successfully added</h1>";
+            print "<h1>Task ".$_POST['title']." was successfully edited</h1>";
         } else {
             print "<h1>Failed to create task".$_POST['title']."</h1>";
         }
@@ -213,14 +214,14 @@ class Task extends AModel
   
   
   <div>
-    <form method = "post" action = "add_task.php" id = "taskform"><pre>
-        <h3>Task Title:               </h3><input type = "text" name = "title" required>
-        <h3>Task Deadline(yyyy-mm-dd:)</h3><input type = "text" name = "deadline" required>
+    <form method = "post" action = "edit_task.php" id = "taskform"><pre>
+        <h3>Task Title:               </h3><input type = "text" name = "title" required default =<?php echo $_SESSION['title'];?>>
+        <h3>Task Deadline(yyyy-mm-dd:)</h3><input type = "text" name = "deadline" required default =<?php echo $_SESSION['deadline'];?>>
         <h3>Notes:                    </h3>
 <textarea name = "notes" rows="4" cols="50">
-
+<?php echo $_SESSION['notes'];?>
 </textarea>
-<input type = "submit" name = "add" value = "Add task">
+<input type = "submit" name = "add" value = "Edit task">
     </pre></form>      
   </div>
 
