@@ -32,13 +32,12 @@ class Task extends AModel
         return true;
     }
 
-    static public function Read(string $title, $username)
+    static public function Read(string $username)
     {
         $dbConnection = getConnection();
         try {
-            $query = $dbConnection->prepare("SELECT * FROM Tasks WHERE title = ? and username = ?");
-            $query->bindParam(1, $title, PDO::PARAM_STR);
-            $query->bindParam(2, $username, PDO::PARAM_STR);
+            $query = $dbConnection->prepare("SELECT * FROM Tasks WHERE username = ?");
+            $query->bindParam(1, $username, PDO::PARAM_STR);
             $query->execute();
             $num_rows = $query->rowCount();
         } catch (PDOException $e){
@@ -49,6 +48,49 @@ class Task extends AModel
             return false;
         } else {
             $result = $query->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }
+
+    }
+
+    static public function ReadPending(string $username)
+    {
+        $dbConnection = getConnection();
+        try {
+            $query = $dbConnection->prepare("SELECT * FROM Tasks WHERE deadline > now() and username = ?");
+            $query->bindParam(1, $username, PDO::PARAM_STR);
+            $query->execute();
+            $num_rows = $query->rowCount();
+        } catch (PDOException $e){
+            print "Failed to retrieve user data: ".$e->getMessage()."\n";
+        }
+
+        if (!$num_rows) {
+            return false;
+        } else {
+            $result = $query->fetchAll();
+            return $result;
+        }
+
+    }
+
+    static public function ReadCompleted(string $username)
+    {
+        $dbConnection = getConnection();
+        try {
+            $query = $dbConnection->prepare("SELECT * FROM Tasks WHERE deadline < now() and username = ?");
+            $query->bindParam(1, $username, PDO::PARAM_STR);
+            $query->execute();
+            $num_rows = $query->rowCount();
+        } catch (PDOException $e){
+            print "Failed to retrieve user data: ".$e->getMessage()."\n";
+            exit();
+        }
+
+        if (!$num_rows) {
+            return false;
+        } else {
+            $result = $query->fetchAll();
             return $result;
         }
 

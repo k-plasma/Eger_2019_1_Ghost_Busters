@@ -1,4 +1,4 @@
-<? include_once "../src/lib/Models/Task.php"; 
+<? require_once "../src/lib/Models/Task.php"; 
 
 //_____________TESTING CODE___________________
 $task = new Task();

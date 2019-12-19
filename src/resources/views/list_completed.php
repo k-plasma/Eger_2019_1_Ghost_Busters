@@ -95,6 +95,49 @@ class Task extends AModel
         }
     }
 
+    static public function ReadPending(string $username)
+    {
+        $dbConnection = getConnection();
+        try {
+            $query = $dbConnection->prepare("SELECT * FROM Tasks WHERE deadline > now() and username = ?");
+            $query->bindParam(1, $username, PDO::PARAM_STR);
+            $query->execute();
+            $num_rows = $query->rowCount();
+        } catch (PDOException $e){
+            print "Failed to retrieve user data: ".$e->getMessage()."\n";
+        }
+
+        if (!$num_rows) {
+            return false;
+        } else {
+            $result = $query->fetchAll();
+            return $result;
+        }
+
+    }
+
+    static public function ReadCompleted(string $username)
+    {
+        $dbConnection = getConnection();
+        try {
+            $query = $dbConnection->prepare("SELECT * FROM Tasks WHERE deadline < now() and username = ?");
+            $query->bindParam(1, $username, PDO::PARAM_STR);
+            $query->execute();
+            $num_rows = $query->rowCount();
+        } catch (PDOException $e){
+            print "Failed to retrieve user data: ".$e->getMessage()."\n";
+            exit();
+        }
+
+        if (!$num_rows) {
+            return false;
+        } else {
+            $result = $query->fetchAll();
+            return $result;
+        }
+
+    }
+
     static public function Delete($title, $username) : bool
     {
         $dbConnection = getConnection();
@@ -193,7 +236,7 @@ class Task extends AModel
         exit();
     }
 
-    $tasks = $task->Read($_SESSION['username']);
+    $tasks = $task->ReadCompleted($_SESSION['username']);
     foreach($tasks as $t){
 
         print '<div class="card">
