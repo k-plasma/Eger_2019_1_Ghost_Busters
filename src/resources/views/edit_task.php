@@ -54,12 +54,13 @@ class Task extends AModel
         return true;
     }
 
-    static public function Read(string $username)
+    static public function Read(string $title, $username)
     {
         $dbConnection = getConnection();
         try {
-            $query = $dbConnection->prepare("SELECT * FROM Tasks WHERE username = ?");
-            $query->bindParam(1, $username, PDO::PARAM_STR);
+            $query = $dbConnection->prepare("SELECT * FROM Tasks WHERE title = ? and username = ?");
+            $query->bindParam(1, $title, PDO::PARAM_STR);
+            $query->bindParam(2, $username, PDO::PARAM_STR);
             $query->execute();
             $num_rows = $query->rowCount();
         } catch (PDOException $e){
@@ -69,7 +70,7 @@ class Task extends AModel
         if (!$num_rows) {
             return false;
         } else {
-            $result = $query->fetchAll();
+            $result = $query->fetch(PDO::FETCH_ASSOC);
             return $result;
         }
 
@@ -118,7 +119,6 @@ class Task extends AModel
 
 <head>
   <!-- BASICS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <meta charset="utf-8">
   <title>EKE - Application Lab Group 2</title>
   <meta name="description" content="">
@@ -136,7 +136,6 @@ class Task extends AModel
   <link rel="stylesheet" href="../../public/css/style.css">
   <!-- skin -->
   <link rel="stylesheet" href="../../skin/default.css">
-  
   
 
 </head>
@@ -178,58 +177,56 @@ class Task extends AModel
     No such file or directory in /var/www/html/Eger_2019_1_Ghost_Busters/src/resources/views/task.php on line 59
     include_once(__DIR__."../../../src/lib/Models/Task.php");*/ 
 
-    $task = new Task();
+    if (isset($_POST["add"])){
 
-    if (isset($_POST['delete']) && isset($_POST['deltitle'])){
-        $temp_title = preg_replace("/_/", " ", $_POST['deltitle']);
-        $task->Delete($temp_title, $_SESSION['username']);
-    }
+        
+        $errors = [];
+        if (empty($_POST['title'])){
+            $errors[] = "Title must be set";
+        }
+        if (empty($_POST['deadline'])){
+            $errors[] = "Deadline musbe set";
+        }
+        if (empty($_SESSION['username'])){
+            throw new Exception("You did some stupid stuff. Username in session was not set.");
+        }
 
-    if (isset($_POST['edit']) && isset($_POST['edittitle'])){
-        print "<h1>I am editing</h1><br>";
-        $temp_title = preg_replace("/_/", " ", $_POST['edittitle']);
-        $_SESSION['title'] = $temp_title;
-        $_SESSION['deadline'] = $_POST['deadline'];
-        $temp_notes = preg_replace("/_/", " ", $_POST['notes']);
-        $_SESSION['notes'] = $temp_notes;
-        header('Location:  edit_task.php');
-        exit();
-    }
+        $new_task = array("title" => $_POST['title'], "username" => $_SESSION['username'], 
+        "deadline" => $_POST['deadline'], "notes" => $_POST['notes']);
+        
+        $task = new Task();
+        $task->Delete($_SESSION['title'], $_SESSION['username']);
+        
+        if (!empty($errors)){
+            foreach ($errors as $error){
+                print "<h1>".$error."</h1>";
+            }
+        }
+        
+        if ($task->Create($new_task)) {
+            print "<h1>Task ".$_POST['title']." was successfully edited</h1>";
+        } else {
+            print "<h1>Failed to create task".$_POST['title']."</h1>";
+        }
 
-    $tasks = $task->Read($_SESSION['username']);
-    foreach($tasks as $t){
-
-        print '<div class="card">
-        <div class="card-header">
-          <strong>'.$t['title'].'</strong>
-        </div>
-        <div class="card-body">
-        <p class="card-text">Deadline: '.$t['deadline'].' </p>  
-          <p class="card-text">Notes: '.$t['notes'].' </p>
-          
-          <form action = "task_list.php" method = "post">          
-          <input type = "hidden" name = "deltitle" value = '.preg_replace("/ /", "_", $t['title']).'>
-          <input type = "hidden" name = "delete" value = "yes">
-          <input type = "submit" name = "submit" value = "Delete task" class="btn btn-primary">
-          </form>
-          
-          <form action = "task_list.php" method = "post">
-          <input type = "hidden" name = "edittitle" value = '.preg_replace("/ /", "_", $t['title']).'>
-          <input type = "hidden" name = "deadline" value = '.$t['deadline'].'>
-          <input type = "hidden" name = "notes" value = '.preg_replace("/ /", "_", $t['notes']).'>
-          <input type = "hidden" name = "edit" value = "yes">
-          <a href="edit_task.php"><input type = "submit" name = "submit_edit" value = "Edit task" class="btn btn-primary"></a>
-          </form>
-          
-        </div>
-      </div>';
-    }
-
-  
+    }   
 ?>
-
-
   
+  
+  <div>
+    <form method = "post" action = "edit_task.php" id = "taskform"><pre>
+        <h3>Task Title:               </h3><input type = "text" name = "title" required value ="<?php echo $_SESSION['title'];?>"">
+        <h3>Task Deadline(yyyy-mm-dd:)</h3><input type = "text" name = "deadline" required value ="<?php echo $_SESSION['deadline'];?>">
+        <h3>Notes:                    </h3>
+<textarea name = "notes" rows="4" cols="50">
+<?php echo $_SESSION['notes'];?>
+</textarea>
+<input type = "submit" name = "add" value = "Edit task">
+    </pre></form>      
+  </div>
+
+
+
 
   <section id="footer" class="section footer">
     <div class="container">
