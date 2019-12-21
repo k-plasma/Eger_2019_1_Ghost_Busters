@@ -1,6 +1,6 @@
 <?php //namespace Models;
-include_once "AModel.php";
-include_once "../Data/database_conn.php";
+include_once __DIR__."/AModel.php";
+include_once __DIR__."/../Data/database_conn.php";
 
 /**
  * Task model.
@@ -47,7 +47,7 @@ class Task extends AModel
         if (!$num_rows) {
             return false;
         } else {
-            $result = $query->fetch(PDO::FETCH_ASSOC);
+            $result = $query->fetchAll();
             return $result;
         }
 
@@ -131,3 +131,5 @@ class Task extends AModel
         }
     }
 }
+
+$task = new Task();

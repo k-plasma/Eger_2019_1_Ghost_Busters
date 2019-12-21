@@ -1,4 +1,6 @@
-<? include_once "../src/lib/Models/User.php";
+<?php include_once __DIR__."/../../src/lib/Models/User.php";
+
+
     //_____________TESTING CODE___________________
 $user = new User();
 $user->Create("CuteCat", "Cat'sPass");   

@@ -1,4 +1,5 @@
-<? require_once "../src/lib/Models/Task.php"; 
+<?php 
+require_once __DIR__."/../../src/lib/Models/Task.php"; 
 
 //_____________TESTING CODE___________________
 $task = new Task();

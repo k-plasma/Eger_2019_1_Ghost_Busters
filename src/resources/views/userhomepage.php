@@ -51,7 +51,7 @@
               <a href="#" class="hi-icon hi-icon-images">images</a>
             </div>
           </div>
-          <a href = "list_completed.php"><h3 class="text-bold">Completed Tasks</h3></a>
+          <a href = "list_completed.php"><h3 class="text-bold">History of Tasks</h3></a>
           
 
           <div class="clear"></div>
