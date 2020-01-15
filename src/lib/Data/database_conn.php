@@ -2,7 +2,7 @@
     //Tania's localhost data
     //To be modified 
 
-function getConnection($host = "localhost", $db_name = "NotesApp", $username = "tanja", $password = "2201"){
+function getConnection($host = "localhost", $db_name = "NotesApp", $username = "tania", $password = "2201"){
  
     try{
         $conn = new PDO("mysql:host=" . $host . ";dbname=" . $db_name, $username, $password);
@@ -16,6 +16,6 @@ function getConnection($host = "localhost", $db_name = "NotesApp", $username = "
 
 
 function get_mysqli_conn(){
-    $con = mysqli_connect("localhost","tanja","2201", "NotesApp") or die("Unable to connect");
+    $con = mysqli_connect("localhost","tania","2201", "NotesApp") or die("Unable to connect");
     return $con;
 }

@@ -33,6 +33,7 @@
         
         if ($task->Create($new_task)) {
             print "<h1>Task ".$_POST['title']." was successfully edited</h1>";
+            header('location:task_list.php');
         } else {
             print "<h1>Failed to create task".$_POST['title']."</h1>";
         }

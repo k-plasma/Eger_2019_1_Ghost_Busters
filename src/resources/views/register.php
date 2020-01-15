@@ -75,7 +75,9 @@
 
                                 if($query_run)
                                 {                                    
-                                    echo '<script type="text/javascript"> alert("Success...Go To Login Page") </script>';                                  
+                                    session_start();
+                                    $_SESSION['username']  = $username;
+                                    header('location:userhomepage.php');                                
                                 }
                                 else
                                 {   

@@ -22,15 +22,6 @@ CREATE TABLE Tasks (
 
 ALTER TABLE Tasks ADD PRIMARY KEY (title, username);
 
-/*Inserting some junk vulues for the testing purposes*/
-INSERT INTO Users VALUES ("Tania", "123456"),
-                         ("John", "nhoJ"),
-                         ("Anna", "Anna00"),
-                         ("MyDog", "hatescats"),
-                         ("Lover", "7777777");
-
-INSERT INTO Tasks(title, username, deadline, created, notes) 
-VALUES ("Finish my project", "Tania", "2019-12-7", now(), Null);
 
 
 
