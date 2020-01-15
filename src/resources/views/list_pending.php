@@ -63,7 +63,9 @@ include_once(__DIR__."/../../../src/lib/Models/Task.php");
 
     if (isset($_POST['delete']) && isset($_POST['deltitle'])){
         $temp_title = preg_replace("/_/", " ", $_POST['deltitle']);
+        echo '<script type="text/javascript"> alert("Task was deleted") </script>';
         $task->Delete($temp_title, $_SESSION['username']);
+        
     }
 
     if (isset($_POST['edit']) && isset($_POST['edittitle'])){

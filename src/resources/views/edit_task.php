@@ -25,17 +25,17 @@
         $task = new Task();
         $task->Delete($_SESSION['title'], $_SESSION['username']);
         
-        if (!empty($errors)){
+        /*if (!empty($errors)){
             foreach ($errors as $error){
                 print "<h1>".$error."</h1>";
             }
-        }
+        }*/
         
         if ($task->Create($new_task)) {
             print "<h1>Task ".$_POST['title']." was successfully edited</h1>";
             header('location:task_list.php');
         } else {
-            print "<h1>Failed to create task".$_POST['title']."</h1>";
+            echo '<script type="text/javascript"> alert("Failed to edit task") </script>';
         }
 
     }   

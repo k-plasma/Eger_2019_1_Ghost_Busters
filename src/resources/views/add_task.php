@@ -25,16 +25,18 @@
         
         $task = new Task();
         
-        if (!empty($errors)){
+        //___________USEFUL FOR TESTING____________
+        /*if (!empty($errors)){
             foreach ($errors as $error){
                 print "<h1>".$error."</h1>";
             }
-        }
+        }*/
+        //________________________________________
         
         if ($task->Create($new_task)) {
-            print "<h1>Task ".$_POST['title']." was successfully added</h1>";
+            echo '<script type="text/javascript"> alert("Task was successfully added") </script>';;
         } else {
-            print "<h1>Failed to create task".$_POST['title']."</h1>";
+            echo '<script type="text/javascript"> alert("Failed to create task") </script>';
         }
 
     }   
